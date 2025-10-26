@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Viel Glück, Love & Katzen 🐱❤️</title>
+  <meta name="theme-color" content="#ff7ac3" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome für Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- GSAP für Animationen -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div id="bg-grad"></div>
+  <div id="hearts-layer" aria-hidden="true"></div>
+  <div id="cats-layer" aria-hidden="true"></div>
+  <div id="sparkles-layer" aria-hidden="true"></div>
+  <div id="paws-layer" aria-hidden="true"></div>
+
+  <header class="app-header">
+    <div class="title-wrap">
+      <h1 class="brand"><span class="cat">🐾</span> Good Luck & Love <span class="heart">❤️</span></h1>
+      <p class="subtitle">Für <span id="nameDisplay">Liebling</span> – Tuesday will be yours!</p>
+    </div>
+    <nav class="top-actions">
+      <button id="partyBtn" class="btn pill"><i class="fa-solid fa-fire"></i> Party Mode</button>
+      <button id="catRainBtn" class="btn pill"><i class="fa-solid fa-cat"></i> Cat Rain</button>
+      <button id="darkModeBtn" class="btn pill"><i class="fa-solid fa-moon"></i> Dark</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="panel hero">
+      <h2 class="hand">Good Luck for Tuesday, <span id="nameInline">Liebling</span>! ✨</h2>
+      <p class="lead">Just for you my Goldschatzling 💌</p>
+      <div class="countdown-card">
+        <div class="count-label">Countdown bis Dienstag</div>
+        <div id="countdownDisplay" class="count-value">–</div>
+      </div>
+      <div class="affirmation">
+        <p><span class="big-heart">💖</span> Du schaffst das! I believe in you. <span class="big-heart">💖</span></p>
+      </div>
+    </section>
+
+    <section class="panel wishes" aria-label="Good Luck Wishes">
+      <div class="panel-head">
+        <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Good Luck Wishes</h3>
+      </div>
+      <div id="wishText" class="wish-text">You are capable, brilliant and ready. Tuesday is yours. 🏆</div>
+      <div class="wish-actions">
+        <button id="nextWishBtn" class="btn"><i class="fa-solid fa-shuffle"></i> Click me for the next message</button>
+        <button id="floatWishBtn" class="btn ghost"><i class="fa-solid fa-heart-circle-bolt"></i>Fly the message as heart</button>
+      </div>
+
+      <details class="add-note">
+        <summary><i class="fa-solid fa-pen"></i> Add your own note</summary>
+        <div class="add-grid">
+          <input id="noteInput" type="text" placeholder="Your message …" maxlength="80" />
+          <button id="addNoteBtn" class="btn small"><i class="fa-solid fa-plus"></i> Add</button>
+        </div>
+        <ul id="notesList" class="notes-list"></ul>
+      </details>
+    </section>
+
+    <section class="panel motivation" aria-label="Motivation & Love">
+      <h3 class="hand">Mini Liebesbrief</h3>
+      <p class="love-note">
+        Hey <strong id="nameLove">Helena</strong>, ich bin so stolz auf dich. Egal was passiert ob du die Klausur gut schreibst oder verkackst (was du nicht wirst btw). Ich werde immer auf dich stolz sein
+        mein Schatz das weißt du ja. Ich wünschte ich könnte bei dir sein deine Hand halten sogar mit dir bis zur Schule gehen oder halt dem Ort an dem du Prüfung schreibst. Ich wünschte ich könnte dich auch in Person 
+        unterstützen. Leider kann ich das nicht aber ich bin immer in deinem Herzen das darfst du nicht vergessen mein Schatzi weißt du das. Immer bin ich in deinem Herzen ganz genau bei dir. Wenn du 
+        dich unsicher fühlst bin ich bei dir wenn du glücklich bist bin ich bei dir
+        Ich bin immer bei dir in deinem Herzen. Es ist schade, dass das Packet noch nicht angekommen ist. Kleines Update vlt kommt das Packet schon am Montag oder Dienstag vlt bekommst du es noch vor englisch 
+        Dann kannst du die kleine Überraschung die da drin ist als Glücksbringer benutzen mein Schatz für die Klausur
+        Ich liebe dich über über über alles mein Schatz💞
+      </p>
+      <div class="moods">
+        <button class="btn heart-burst" id="heartBurstBtn"><i class="fa-solid fa-heart"></i>Heartrain</button>
+        <button class="btn cat-parade" id="catParadeBtn"><i class="fa-solid fa-paw"></i>Cats and Cats and more cats</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>Made with <span class="footer-heart">❤️</span> & <span class="footer-cat">🐱</span> by <a href="#" id="byWho">your Hasi</a></p>
+  </footer>
+
+  <!-- Accessible live region for feedback -->
+  <div id="live" class="sr-only" aria-live="polite"></div>
+</body>
+</html>
